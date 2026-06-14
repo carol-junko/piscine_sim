@@ -7,7 +7,7 @@ void	ft_print_alphabet(void)
 
 	alphabet = "abcdefghijklmnopqrstuvwxyz";
 	i = 0;
-	while (i <= alphabet[i])
+	while (alphabet[i] != '\0')
 	{
 		write(1, &alphabet[i], 1);
 		i = i + 1;
