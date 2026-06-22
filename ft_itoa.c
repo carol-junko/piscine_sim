@@ -17,10 +17,16 @@ int	countdigits(int n)
 char	*ft_itoa(int n)
 {
 	int		size;
+	int		is_negative;
 	char	*number;
 
 	size = countdigits(n);
-	number = (char *)malloc(12 * (size + 1));
+	is_negative = 0;
+	if (n < 0)
+	{
+		is_negative = 1;
+	}
+	number = (char *)malloc(size + 1 + is_negative);
 	if (number == NULL)
 	{
 		return (NULL);
